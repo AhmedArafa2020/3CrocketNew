@@ -216,7 +216,7 @@
             <!-- End Start Hero Area -->
             <!-- Start About Area -->
                 @php
-                    $aboutPage = App\Models\Page::where('link', '/about')->first();
+                    $aboutPage = App\Models\Page::where('link', '/about')->first()?? null;;
                     $currentLocale = app()->getLocale();
                 @endphp
 
@@ -233,7 +233,7 @@
 
             <!-- Start Brand -->
                 @php
-                    $accreditationsPage = App\Models\Page::where('link', '/accreditations')->first();
+                    $accreditationsPage = App\Models\Page::where('link', '/accreditations')->first() ?? null;;
                     $currentLocale = app()->getLocale();
 
                     // Extract text from CKEditor content (if exists)
