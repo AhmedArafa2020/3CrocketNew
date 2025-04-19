@@ -233,14 +233,22 @@
 
             <!-- Start Brand -->
                 @php
-                    $accreditationsPage = App\Models\Page::where('link', '/accreditations')->first() ?? null;;
+                    $accreditationsPage = App\Models\Page::where('link', '/accreditations')->first();
                     $currentLocale = app()->getLocale();
 
-                    // Extract text from CKEditor content (if exists)
-                    $ckContent = $accreditationsPage->translate($currentLocale)->content ?? '';
+                    // Set default values
+                    $defaultContent = 'Our Accreditations|||School in the Middle East ISO 21001, STEM|||3C Online Coding School is the most accredited coding school...';
 
-                    // Parse text sections (assuming simple format)
-                    $sections = explode('|||', $ckContent); // Simple delimiter
+                    // Get content with null safety
+                    $ckContent = $accreditationsPage && $accreditationsPage->translate($currentLocale)
+                        ? ($accreditationsPage->translate($currentLocale)->content ?? $defaultContent)
+                        : $defaultContent;
+
+                    // Parse text sections
+                    $sections = explode('|||', $ckContent);
+
+                    // Ensure we have at least 3 sections
+                    $sections = array_pad($sections, 5, '');
                 @endphp
 
                 <div class="ep-brand section-gap pt-0">
