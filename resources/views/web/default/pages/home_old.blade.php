@@ -15,7 +15,8 @@
             @endpush
         @endif
 
-        <section class="slider-container  {{ ($heroSection == "2") ? 'slider-hero-section2' : '' }}" @if(empty($heroSectionData['is_video_background'])) style="background-image: url('{{ $heroSectionData['hero_background'] }}')" @endif>
+        <section class="slider-container  {{ ($heroSection == "2") ? 'slider-hero-section2' : '' }}"
+                 @if(empty($heroSectionData['is_video_background'])) style="background-image: url('{{ $heroSectionData['hero_background'] }}')" @endif>
 
             @if($heroSection == "1")
                 @if(!empty($heroSectionData['is_video_background']))

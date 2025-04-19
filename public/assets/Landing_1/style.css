@@ -1,4 +1,4 @@
-@import "assets/section-css/reset.css";
+@import "../Landing_1/assets/section-css/reset.css";
 @import "assets/section-css/header.css";
 @import "assets/section-css/hero.css";
 @import "assets/section-css/about.css";
@@ -57,7 +57,7 @@
     margin-bottom: 5px;
 }
 .BookFormBox .FormBook .form-group .form-control{
-    
+
 }
 .BookFormBox .FormBook .form-group .ep-btn{
     border-radius: 0;
@@ -98,7 +98,7 @@ font-weight: 300;
 
 }
 .BookZoom .MainTitle{
-    
+
 }
 .BookZoom .MainTitle h2{
     font-size: 1.875rem;
@@ -157,10 +157,10 @@ margin: 0;
     color: #fff;
 }
 .BookZoom .TimeTappps .tab-content{
-    
+
 }
 .BookZoom .TimeTappps .tab-content .tab-pane{
-    
+
 }
 .GroupTimes .TimeItemss{
     display: inline-block;
@@ -380,7 +380,7 @@ margin-top: 20px;
 .latestBlog .Blogitm{
  display: flex;
  gap: 16px;
- align-items: flex-start;   
+ align-items: flex-start;
  margin-bottom: 10px;
 }
 .latestBlog .Blogitm .BlogImage{
@@ -398,7 +398,7 @@ margin-top: 20px;
     object-position: center;
 }
 .latestBlog .Blogitm .BlogData{
-    
+
 }
 .latestBlog .Blogitm .BlogData p{
     font-size: 13px;

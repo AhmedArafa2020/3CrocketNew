@@ -12,34 +12,9 @@
     }
 
 @endphp
-<head>
-    <!-- Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/Landing_1/assets/images/new/3C.png" />
-    <!-- Site Title -->
-    <title>3 </title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="assets/Landing_1/assets/plugins/css/bootstrap.min.css" />
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="assets/Landing_1/assets/plugins/css/animate.min.css" />
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="assets/Landing_1/assets/plugins/css/owl.carousel.min.css" />
-    <!-- Maginific Popup CSS -->
-    <link rel="stylesheet" href="assets/Landing_1/assets/plugins/css/maginific-popup.min.css" />
-    <!-- Nice Select CSS -->
-    <link rel="stylesheet" href="assets/Landing_1/assets/plugins/css/nice-select.min.css" />
-    <!-- Icofont -->
-    <link rel="stylesheet" href="assets/Landing_1/assets/plugins/css/icofont.css" />
-    <!-- Uicons -->
-    <link rel="stylesheet" href="assets/Landing_1/assets/plugins/css/uicons.css" />
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/Landing_1/assets/libs/Inte_Tel_Code/css/intlTelInput.css" />
-    <link rel="stylesheet" href="assets/Landing_1/style.css" />
+@extends(getTemplate().'.layouts.appnew')
 
-</head>
+
 <body class="ep-magic-cursor">
 
 <!-- Start Preloader  -->
@@ -152,21 +127,27 @@
 <div id="smooth-wrapper">
     <div id="smooth-content">
         <main>
+            @if($heroSection == "1")
+                @if(!empty($heroSectionData['is_video_background']))
+                    <video playsinline autoplay muted loop id="homeHeroVideoBackground" class="img-cover">
+                        <source src="{{ $heroSectionData['hero_background'] }}" type="video/mp4">
+                    </video>
+                @endif
+
+                <div class="mask"></div>
+            @endif
             <!-- Start Hero Area -->
+
             <section class="ep-hero section-bg-1">
                 <div class="container ">
                     <div class="row align-items-center">
                         <div class="col-lg-12 col-xl-6 col-12">
                             <div class="ep-hero__content">
                                 <h1 class="ep-hero__title  left">
-                                    Inspiring today’s minds... to build tomorrow’s leaders!
+                                    {{ $heroSectionData['title'] }}
                                 </h1>
                                 <p class="ep-hero__text">
-                                    .Learning coding and AI is no longer optional — it’s a must-have skill for a future full of opportunities
-                                    At 3C Coding School, we offer an interactive online learning experience for kids aged 6 to 18
-                                    .Our certified curriculum is project-based and delivered by top experts in coding and technology
-                                    Give your child the chance to explore the programming world in a fun, engaging, and effective way
-
+                                    {!! nl2br($heroSectionData['description']) !!}
 
                                 </p>
                                 <div class="ep-hero__btn">
@@ -234,190 +215,77 @@
             </section>
             <!-- End Start Hero Area -->
             <!-- Start About Area -->
-            <section class="ep-about ep-about--style2 ep-section section-gap position-relative">
-                <div class="container ">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 col-12">
-                            <div class="ep-section__img ep-section__img--style2 position-relative">
-                                <div class="ep-section__img-main">
-                                    <img src="assets/Landing_1/assets/images/about/about-2/about-img.png" alt="about-img" />
-                                </div>
-                                <div class="overview-card updown-ani">
-                                    <div class="overview-card__icon">
-                                        <img src="assets/Landing_1/assets/images/about/about-1/user.svg" alt="user-icon" />
-                                    </div>
-                                    <div class="overview-card__info">
-                                        <h4><span>2</span>k+</h4>
-                                        <p>Full Time Student</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-12">
-                            <div class="ep-section__content">
-                                <div class="ep-section-head">
-                                        <span class="ep-section-head__sm-title ep1-color"
-                                        >Know About Us</span
-                                        >
-                                    <h3 class="ep-section-head__big-title  left">
-                                        Why Choose 3C?
-                                    </h3>
-                                    <p class="ep-section-head__text">
-                                        We offer your child the opportunity to build real-world coding
-                                        skills and work on hands-on tech projects — all designed to
-                                        prepare them for a future as a confident, professional
-                                        programmer.</p>
-                                </div>
-                                <div class="ep-section__widget">
-                                    <div class="ep-feature-list">
-                                        <div class="ep-feature-list__icon">
-                                            <i class="fi fi-ss-check-circle"></i>
-                                        </div>
-                                        <div class="ep-feature-list__info">
-                                            <h5>Certified Curriculum</h5>
-                                            <p>Accredited learning paths are designed by experts from MIT and Google.</p>
-                                        </div>
-                                    </div>
-                                    <div class="ep-feature-list">
-                                        <div class="ep-feature-list__icon">
-                                            <i class="fi fi-ss-check-circle"></i>
-                                        </div>
-                                        <div class="ep-feature-list__info">
-                                            <h5>Live, Interactive Online Classes</h5>
-                                            <p>Choose between private 1-on-1 sessions or group classes
-                                                tailored to your child’s learning style.</p>
-                                        </div>
-                                    </div>
-                                    <div class="ep-feature-list">
-                                        <div class="ep-feature-list__icon">
-                                            <i class="fi fi-ss-check-circle"></i>
-                                        </div>
-                                        <div class="ep-feature-list__info">
-                                            <h5>Fun & Simplified Learning</h5>
-                                            <p>
-                                                We teach high-demand tech skills in a simple, engaging way,
-                                                making coding fun and easy to understand.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="ep-feature-list">
-                                        <div class="ep-feature-list__icon">
-                                            <i class="fi fi-ss-check-circle"></i>
-                                        </div>
-                                        <div class="ep-feature-list__info">
-                                            <h5>Top Expert Instructors</h5>
-                                            <p>Your child will be guided by experienced engineers who teach
-                                                in both Arabic and English for the best learning experience.</p>
-                                        </div>
-                                    </div>
-                                    <div class="ep-feature-list">
-                                        <div class="ep-feature-list__icon">
-                                            <i class="fi fi-ss-check-circle"></i>
-                                        </div>
-                                        <div class="ep-feature-list__info">
-                                            <h5>Clear Career Pathway</h5>
-                                            <p>Our comprehensive programs include a step-by-step roadmap
-                                                that helps your child build a solid tech career foundation.</p>
-                                        </div>
-                                    </div>
+                @php
+                    $aboutPage = App\Models\Page::where('link', '/about')->first();
+                    $currentLocale = app()->getLocale();
+                @endphp
 
-                                    <div class="ep-feature-list">
-                                        <div class="ep-feature-list__icon">
-                                            <i class="fi fi-ss-check-circle"></i>
-                                        </div>
-                                        <div class="ep-feature-list__info">
-                                            <h5>Ongoing Support After Class</h5>
-                                            <p>We offer continuous mentoring and follow-ups to boost your
-                                                child’s skills and help them grow confidently in the tech
-                                                world.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ep-section__btn">
-                                    <a href="about.html" class="ep-btn border-btn"
-                                    >Book Now <i class="fi fi-rs-arrow-small-right"></i>
-                                    </a>
-                                </div>
-                            </div>
+                @if($aboutPage)
+                    <section class="ep-about ep-about--style2 ep-section section-gap position-relative">
+                        <div class="container">
+                            {!! $aboutPage->translate($currentLocale)->content !!}
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
+
+                @endif
             <!-- End Start About Area -->
 
 
             <!-- Start Brand -->
-            <div class="ep-brand section-gap pt-0">
-                <div class="container ">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8 col-xl-6 col-md-8 col-12">
-                            <div class="ep-section-head text-center">
-                                <span class="ep-section-head__sm-title ep1-color">Our Accreditations</span>
-                                <h3 class="ep-section-head__big-title  left">
-                                    The Most <span>Accreditation</span> School in the
-                                    Middle East ISO 21001, STEM
-                                </h3>
+                @php
+                    $accreditationsPage = App\Models\Page::where('link', '/accreditations')->first();
+                    $currentLocale = app()->getLocale();
 
+                    // Extract text from CKEditor content (if exists)
+                    $ckContent = $accreditationsPage->translate($currentLocale)->content ?? '';
+
+                    // Parse text sections (assuming simple format)
+                    $sections = explode('|||', $ckContent); // Simple delimiter
+                @endphp
+
+                <div class="ep-brand section-gap pt-0">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-xl-6 col-md-8 col-12">
+                                <div class="ep-section-head text-center">
+                                    <!-- Small Title (from CKEditor) -->
+                                    <span class="ep-section-head__sm-title ep1-color">
+                        {{ $sections[0] ?? 'Our Accreditations' }}
+                    </span>
+
+                                    <!-- Main Title (from CKEditor) -->
+                                    <h3 class="ep-section-head__big-title left">
+                                        {{ $sections[1] ?? 'The Most' }}      <span>{{ $sections[2] ?? 'Accreditation' }} </span> {{ $sections[3] ?? 'School in the Middle East ISO 21001, STEM' }}
+                                    </h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-8 col-xl-10 col-md-8 col-12">
-                            <div class="ep-section-head text-center">
-
-                                <p>3C Online Coding School is the most accredited coding school in the Middle East, officially certified
-                                    .by ISO 21001 and STEM.org
-                                    These global accreditations ensure that our programs meet the highest international standards in
-                                    .educational management and STEM (Science, Technology, Engineering, and Math) learning
-                                    They guarantee a high-quality learning experience that’s carefully designed to meet the needs of
-                                    .every student</p>
+                            <div class="col-lg-8 col-xl-10 col-md-8 col-12">
+                                <div class="ep-section-head text-center">
+                                    <!-- Description (from CKEditor) -->
+                                    <p class="ep-section-head__text">
+                                        {{ $sections[4] ?? '3C Online Coding School is the most accredited...' }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                </div>
-                <div class="container ep-container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="owl-carousel ep-brand__slider">
-                                <!-- Single Brand -->
-                                <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                    <img
-                                        src="assets/Landing_1/assets/images/brand/brand-2/1.svg"
-                                        alt="brand-logo"
-                                    />
-                                </a>
-                                <!-- Single Brand -->
-                                <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                    <img
-                                        src="assets/Landing_1/assets/images/brand/brand-2/2.svg"
-                                        alt="brand-logo"
-                                    />
-                                </a>
-                                <!-- Single Brand -->
-                                <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                    <img
-                                        src="assets/Landing_1/assets/images/brand/brand-2/3.svg"
-                                        alt="brand-logo"
-                                    />
-                                </a>
-                                <!-- Single Brand -->
-                                <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                    <img
-                                        src="assets/Landing_1/assets/images/brand/brand-2/4.svg"
-                                        alt="brand-logo"
-                                    />
-                                </a>
-                                <!-- Single Brand -->
-                                <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                    <img
-                                        src="assets/Landing_1/assets/images/brand/brand-2/5.svg"
-                                        alt="brand-logo"
-                                    />
-                                </a>
+                    <!-- Static Carousel (hardcoded) -->
+                    <div class="container ep-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="owl-carousel ep-brand__slider">
+                                    @foreach(range(1,5) as $index)
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{ asset("assets/Landing_1/assets/images/brand/brand-2/{$index}.svg") }}" alt="brand-logo">
+                                        </a>
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
             <!-- End Start Brand -->
 
 
@@ -1584,42 +1452,6 @@
 </div>
 
 <!-- Jquery JS -->
-<script src="assets/Landing_1/assets/plugins/js/jquery.min.js"></script>
-<script src="assets/Landing_1/assets/plugins/js/jquery-migrate.js"></script>
 
-<!-- Bootstrap JS -->
-<script src="assets/Landing_1/assets/plugins/js/bootstrap.min.js"></script>
-<!-- Gsap JS -->
-<script src="assets/Landing_1/assets/plugins/js/gsap/gsap.js"></script>
-<script src="assets/Landing_1/assets/plugins/js/gsap/gsap-scroll-to-plugin.js"></script>
-<script src="assets/Landing_1/assets/plugins/js/gsap/gsap-scroll-smoother.js"></script>
-<script src="assets/Landing_1/assets/plugins/js/gsap/gsap-scroll-trigger.js"></script>
-<script src="assets/Landing_1/assets/plugins/js/gsap/gsap-split-text.js"></script>
-<!-- Wow JS -->
-<script src="assets/Landing_1/assets/plugins/js/wow.min.js"></script>
-<!-- Owl Carousel JS -->
-<script src="assets/Landing_1/assets/plugins/js/owl.carousel.min.js"></script>
-<!-- Magnific Popup JS -->
-<script src="assets/Landing_1/assets/plugins/js/magnific-popup.min.js"></script>
-<!-- CounterUp  JS -->
-<script src="assets/Landing_1/assets/plugins/js/jquery.counterup.min.js"></script>
-<script src="assets/Landing_1/assets/plugins/js/waypoints.min.js"></script>
-<!-- Nice Select JS -->
-<script src="assets/Landing_1/assets/plugins/js/nice-select.min.js"></script>
-<!-- Cursor JS -->
-<script src="assets/Landing_1/assets/plugins/js/ep-cursor.js"></script>
-<!-- Back To Top JS -->
-<script src="assets/Landing_1/assets/plugins/js/backToTop.js"></script>
-<!-- Main JS -->
-<script src="assets/Landing_1/assets/plugins/js/active.js"></script>
-<script src="assets/Landing_1/assets/libs/Inte_Tel_Code/js/intlTelInput.js"></script>
-<script>
-    var input = document.querySelector("#phone");
-    window.intlTelInput(input, {
-        preferredCountries: ["sa", "eg"],
-        separateDialCode: true,
-        utilsScript: "assets/Landing_1/assets/libs/Inte_Tel_Code/js/utils.js",
-    });
-</script>
 </body>
 
