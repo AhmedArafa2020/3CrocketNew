@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\HeroSectionController;
 use Illuminate\Support\Facades\Route;
 
 $prefix = getAdminPanelUrlPrefix();
@@ -504,7 +505,10 @@ Route::group(['prefix' => $prefix, 'namespace' => 'Admin', 'middleware' => ['web
                 Route::get('/{id}/delete', 'BlogCategoriesController@delete');
             });
         });
-
+        Route::prefix('hero')->group(function() {
+            Route::get('hero-section/edit', [HeroSectionController::class, 'edit'])->name('hero.edit');
+            Route::put('hero-section/{heroSection}', [HeroSectionController::class, 'update'])->name('hero.update');
+        });
         Route::group(['prefix' => 'financial'], function () {
 
             Route::group(['prefix' => 'sales'], function () {

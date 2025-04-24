@@ -33,29 +33,32 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/Landing_1/assets/libs/Inte_Tel_Code/css/intlTelInput.css" />
     <link rel="stylesheet" href="assets/Landing_1/style.css" />
-    @if($isRtl)
+
+
+
+@if($isRtl)
         <link rel="stylesheet" href="/assets/default/css/rtl-app.css">
     @endif
 
     @stack('styles_top')
     @stack('scripts_top')
 
-    <style>
-        {!! !empty(getCustomCssAndJs('css')) ? getCustomCssAndJs('css') : '' !!}
+{{--    <style>--}}
+{{--        {!! !empty(getCustomCssAndJs('css')) ? getCustomCssAndJs('css') : '' !!}--}}
 
-        {!! getThemeFontsSettings() !!}
+{{--        {!! getThemeFontsSettings() !!}--}}
 
-        {!! getThemeColorsSettings() !!}
-    </style>
+{{--        {!! getThemeColorsSettings() !!}--}}
+{{--    </style>--}}
 
 
-    @if(!empty($generalSettings['preloading']) and $generalSettings['preloading'] == '1')
-        @include('admin.includes.preloading')
-    @endif
+{{--    @if(!empty($generalSettings['preloading']) and $generalSettings['preloading'] == '1')--}}
+{{--        @include('admin.includes.preloading')--}}
+{{--    @endif--}}
 </head>
 
-<body class="@if($isRtl) rtl @endif">
-
+{{--<body class="@if($isRtl) rtl @endif ep-magic-cursor">--}}
+<body class="ep-magic-cursor">
 <div id="app" class="{{ (!empty($floatingBar) and $floatingBar->position == 'top' and $floatingBar->fixed) ? 'has-fixed-top-floating-bar' : '' }}">
     @if(!empty($floatingBar) and $floatingBar->position == 'top')
 {{--        @include('web.default.includes.floating_bar')--}}
@@ -74,6 +77,7 @@
 
     @if(!isset($appFooter))
 {{--        @include('web.default.includes.footer')--}}
+{{--            @include('web.default.pages.includes.new_footer')--}}
     @endif
 
 {{--    @include('web.default.includes.advertise_modal.index')--}}

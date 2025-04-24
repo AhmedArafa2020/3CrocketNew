@@ -776,6 +776,28 @@
                     </ul>
                 </li>
             @endcan
+{{--                @can('admin_new_home')--}}
+                    <li class="nav-item dropdown {{ request()->is(getAdminPanelUrl('/new-home*', false)) ? 'active' : '' }}">
+                        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                            <i class="fas fa-home"></i>
+                            <span>New Home</span>
+                        </a>
+                        <ul class="dropdown-menu">
+{{--                            @can('admin_new_home_hero')--}}
+                                <li class="{{ request()->is(getAdminPanelUrl('/new-home/hero', false)) ? 'active' : '' }}">
+                                    <a class="nav-link" href="{{ route('hero.edit') }}">Hero Section</a>
+
+                                </li>
+{{--                            @endcan--}}
+{{--                            @can('admin_new_home_about')--}}
+                                <li class="{{ request()->is(getAdminPanelUrl('/new-home/about', false)) ? 'active' : '' }}">
+                                    <a class="nav-link" href="{{ getAdminPanelUrl() }}/new-home/about">About Section</a>
+                                </li>
+{{--                            @endcan--}}
+                            {{-- Add more here... --}}
+                        </ul>
+                    </li>
+{{--                @endcan--}}
 
             @if($authUser->can('admin_blog') or
                 $authUser->can('admin_pages') or
