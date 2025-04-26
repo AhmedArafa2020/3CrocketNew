@@ -789,15 +789,18 @@
 
                                 </li>
 {{--                            @endcan--}}
-{{--                            @can('admin_new_home_about')--}}
-                                <li class="{{ request()->is(getAdminPanelUrl('/new-home/about', false)) ? 'active' : '' }}">
-                                    <a class="nav-link" href="{{ getAdminPanelUrl() }}/new-home/about">About Section</a>
+                            {{-- Add more here... --}}
+{{--                            @can('admin_about_section')--}}
+                                <li class="{{ request()->is(getAdminPanelUrl('/new-home/about/edit', false)) ? 'active' : '' }}">
+                                    <a href="{{ route('admin.new_about.edit') }}">Edit About Section</a>
+
+
                                 </li>
 {{--                            @endcan--}}
-                            {{-- Add more here... --}}
                         </ul>
                     </li>
 {{--                @endcan--}}
+
 
             @if($authUser->can('admin_blog') or
                 $authUser->can('admin_pages') or

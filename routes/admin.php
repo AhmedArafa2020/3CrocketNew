@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\HeroSectionController;
+use App\Http\Controllers\Admin\NewAboutSectionController;
 use Illuminate\Support\Facades\Route;
 
 $prefix = getAdminPanelUrlPrefix();
@@ -509,6 +510,13 @@ Route::group(['prefix' => $prefix, 'namespace' => 'Admin', 'middleware' => ['web
             Route::get('hero-section/edit', [HeroSectionController::class, 'edit'])->name('hero.edit');
             Route::put('hero-section/{heroSection}', [HeroSectionController::class, 'update'])->name('hero.update');
         });
+
+
+        Route::prefix('new-home/about')->group(function () {
+            Route::get('edit', [NewAboutSectionController::class, 'edit'])->name('admin.new_about.edit');
+            Route::put('update', [NewAboutSectionController::class, 'update'])->name('admin.new_about.update');
+        });
+
         Route::group(['prefix' => 'financial'], function () {
 
             Route::group(['prefix' => 'sales'], function () {
