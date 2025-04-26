@@ -1,7 +1,7 @@
 /node_modules
 /public/build
 /public/hot
-/storage/logs
+/storage/logs/laravel.log
 /public/storage
 /vendor
 .env
