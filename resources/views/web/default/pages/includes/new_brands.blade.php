@@ -1,40 +1,3 @@
-{{--@if(!empty($brands))--}}
-{{--    <div class="ep-brand section-gap pt-0">--}}
-{{--        <div class="container">--}}
-{{--            <div class="row justify-content-center">--}}
-{{--                <div class="col-lg-8 col-xl-6 col-md-8 col-12">--}}
-{{--                    <div class="ep-section-head text-center">--}}
-{{--                    <span class="ep-section-head__sm-title ep1-color">--}}
-{{--                        {{ $brands['subtitle'] ?? trans('home.our_accreditations') }}--}}
-{{--                    </span>--}}
-{{--                        <h3 class="ep-section-head__big-title left">--}}
-{{--                            {{ $brands['title'] ?? '' }}--}}
-{{--                        </h3>--}}
-{{--                        <p class="ep-section-head__text">--}}
-{{--                            {!! nl2br($brands['description'] ?? '') !!}--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-
-{{--        @if(!empty($brands['items']))--}}
-{{--            <div class="container ep-container">--}}
-{{--                <div class="row">--}}
-{{--                    <div class="col-12">--}}
-{{--                        <div class="owl-carousel ep-brand__slider">--}}
-{{--                            @foreach($brands['items'] as $brand)--}}
-{{--                                <div class="ep-brand__logo ep-brand__logo--style2">--}}
-{{--                                    <img src="{{ $brand['image'] }}" alt="{{ $brand['title'] }}">--}}
-{{--                                </div>--}}
-{{--                            @endforeach--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        @endif--}}
-{{--    </div>--}}
-{{--@endif--}}
 <!-- Start Brand -->
 <div class="ep-brand section-gap pt-0">
     <div class="container ">
@@ -70,35 +33,35 @@
                     <!-- Single Brand -->
                     <a href="#" class="ep-brand__logo ep-brand__logo--style2">
                         <img
-                            src="assets/Landing_1/assets/images/brand/brand-2/1.svg"
+                            src="/assets/Landing_1/assets/images/brand/brand-2/1.svg"
                             alt="brand-logo"
                         />
                     </a>
                     <!-- Single Brand -->
                     <a href="#" class="ep-brand__logo ep-brand__logo--style2">
                         <img
-                            src="assets/Landing_1/assets/images/brand/brand-2/2.svg"
+                            src="/assets/Landing_1/assets/images/brand/brand-2/2.svg"
                             alt="brand-logo"
                         />
                     </a>
                     <!-- Single Brand -->
                     <a href="#" class="ep-brand__logo ep-brand__logo--style2">
                         <img
-                            src="assets/Landing_1/assets/images/brand/brand-2/3.svg"
+                            src="/assets/Landing_1/assets/images/brand/brand-2/3.svg"
                             alt="brand-logo"
                         />
                     </a>
                     <!-- Single Brand -->
                     <a href="#" class="ep-brand__logo ep-brand__logo--style2">
                         <img
-                            src="assets/Landing_1/assets/images/brand/brand-2/4.svg"
+                            src="/assets/Landing_1/assets/images/brand/brand-2/4.svg"
                             alt="brand-logo"
                         />
                     </a>
                     <!-- Single Brand -->
                     <a href="#" class="ep-brand__logo ep-brand__logo--style2">
                         <img
-                            src="assets/Landing_1/assets/images/brand/brand-2/5.svg"
+                            src="/assets/Landing_1/assets/images/brand/brand-2/5.svg"
                             alt="brand-logo"
                         />
                     </a>

@@ -20,28 +20,38 @@ class NewAboutSectionController extends Controller
 
     public function update(Request $request)
     {
-
         $newAboutSection = NewAboutSection::first();
 
-        $validated = $request->validate([
-            'sm_title' => 'required|string|max:255',
-            'big_title' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'image' => 'nullable|image',
-            // 'overview_icon' => 'nullable|string',
-            'overview_number' => 'nullable|string',
-            'overview_text' => 'nullable|string',
-            'btn_text' => 'nullable|string',
-            'btn_link' => 'nullable|url',
-            'feature_cards' => 'nullable|json',
-        ]);
-
-        $newAboutSection->update($validated);
-
         if (!$newAboutSection) {
-            return redirect()->route('admin.new_about.edit')->with('error', 'Section not found');
+            return redirect()->back()->with('error', 'Section not found');
         }
-        return redirect()->route('admin.new_about.edit')->with('success', 'About section updated successfully!');
 
+        try {
+            $validated = $request->validate([
+                'sm_title' => 'required|string|max:255',
+                'big_title' => 'required|string|max:255',
+                'description' => 'nullable|string',
+                'image' => 'nullable|image',
+                'overview_number' => 'nullable|string',
+                'overview_text' => 'nullable|string',
+                'btn_text' => 'nullable|string',
+                'btn_link' => 'nullable|url',
+                'feature_cards' => 'nullable|json', // 👈 this might fail silently if invalid
+            ]);
+
+            // Optional: dump to debug
+            // dd($validated);
+
+            if ($request->hasFile('image')) {
+                $validated['image'] = $request->file('image')->store('uploads/about', 'public');
+            }
+
+            $newAboutSection->update($validated);
+
+            return redirect()->back()->with('success', 'Updated!');
+        } catch (\Throwable $e) {
+            return redirect()->back()->with('error', 'Exception: ' . $e->getMessage());
+        }
     }
+
 }

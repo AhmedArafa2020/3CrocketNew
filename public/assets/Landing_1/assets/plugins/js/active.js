@@ -275,13 +275,13 @@
       ],
       responsive: {
         300: {
-          items: 1,
+          items: 2,
         },
         480: {
-          items: 1,
+          items: 3,
         },
         768: {
-          items: 2,
+          items: 3,
         },
         1024: {
           items: 3,
@@ -291,6 +291,47 @@
         },
         1570: {
           items: 4,
+        },
+      },
+    });
+
+
+    
+    $(".SliderWHyUs__slider").owlCarousel({
+      items: 2,
+      autoplay: true,
+      loop: true,
+      touchDrag: true,
+      mouseDrag: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: false,
+      smartSpeed: 500,
+      merge: true,
+      margin: 10,
+      dots: false,
+      nav: true,
+      navText: [
+        "<i class='fi fi-rs-arrow-small-left'></i>",
+        "<i class='fi fi-rs-arrow-small-right'></i>",
+      ],
+      responsive: {
+        300: {
+          items: 1,
+        },
+        480: {
+          items: 1,
+        },
+        768: {
+          items: 1,
+        },
+        1024: {
+          items: 2,
+        },
+        1200: {
+          items: 2,
+        },
+        1570: {
+          items: 2,
         },
       },
     });

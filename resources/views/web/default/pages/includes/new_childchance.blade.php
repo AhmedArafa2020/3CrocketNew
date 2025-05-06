@@ -1,7 +1,4 @@
-<section
-    class="ep-hero ep-hero--style2 hero-bg background-image"
-    style="background-image: url('assets/images/hero/home-2/bg.png')"
->
+<section class="ep-hero ep-hero--style2 hero-bg background-image" style="background-image: url('/assets/Landing_1/assets/images/hero/home-2/bg.png')"  >
     <div class="container ep-container">
         <div class="row align-items-center">
             <div class="col-lg-12 col-xl-6 col-12">
@@ -19,7 +16,7 @@
                 <div class="ep-hero__widget ep-hero__widget-style2 position-relative" >
                     <div class="ep-hero__img">
                         <img
-                            src="assets/Landing_1/assets/images/hero/home-2/hero-img.png"
+                            src="/assets/Landing_1/assets/images/new/new_20_4_2025/Frame.png"
                             alt="hero-img"
                         />
                     </div>

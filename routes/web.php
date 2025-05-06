@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Web\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -92,7 +93,7 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
     // set Locale
     Route::post('/set-currency', 'SetCurrencyController@setCurrency');
 
-    Route::get('/', 'HomeController@index');
+    Route::get('/', 'HomeController@index')->name('home');
 
     Route::get('/getDefaultAvatar', 'DefaultAvatarController@make');
 
@@ -393,6 +394,14 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
             Route::get('/{item_type}/{item_slug}', 'GiftController@index');
             Route::post('/{item_type}/{item_slug}', 'GiftController@store');
         });
+    });
+    Route::group(['prefix' => 'booking'], function () {
+        Route::get('/start', [HomeController::class, 'startForm'])->name('booking.startForm');
+        Route::post('/start', [HomeController::class, 'startSubmit'])->name('booking.startSubmit');
+
+        Route::get('/select-slot', [HomeController::class, 'selectSlotForm'])->name('booking.selectSlotForm');
+        Route::post('/select-slot', [HomeController::class, 'selectSlotSubmit'])->name('booking.selectSlotSubmit');
+
     });
 
     /* Forms */

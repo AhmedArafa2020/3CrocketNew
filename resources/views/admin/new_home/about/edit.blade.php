@@ -14,6 +14,16 @@
             {{ session('error') }}
         </div>
     @endif
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <strong>Whoops! Something went wrong:</strong>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="card">
         <div class="card-header">
             <h4>Edit New About Section</h4>
@@ -55,10 +65,10 @@
                     <input type="text" class="form-control" name="btn_text" id="btn_text" value="{{ old('btn_text', $newAboutSection->btn_text) }}">
                 </div>
 
-                <div class="form-group">
-                    <label for="btn_link">Button Link</label>
-                    <input type="text" class="form-control" name="btn_link" id="btn_link" value="{{ old('btn_link', $newAboutSection->btn_link) }}">
-                </div>
+{{--                <div class="form-group">--}}
+{{--                    <label for="btn_link">Button Link</label>--}}
+{{--                    <input type="text" class="form-control" name="btn_link" id="btn_link" value="{{ old('btn_link', $newAboutSection->btn_link) }}">--}}
+{{--                </div>--}}
 
                 <div class="form-group">
                     <label for="feature_cards">Feature Cards (JSON)</label>

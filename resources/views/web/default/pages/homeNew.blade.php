@@ -66,7 +66,7 @@
                     <!-- offcanvas-logo-start -->
                     <div class="offcanvas-logo">
                         <a href="index.html">
-                            <img src="assets/Landing_1/assets/images/new/3C.png" alt="logo" />
+                            <img src="/assets/Landing_1/assets/images/new/3C.png" alt="logo" />
                         </a>
                     </div>
                     <!-- offcanvas-logo-end -->
@@ -107,7 +107,7 @@
                         <div class="col-lg-2 col-6">
                             <div class="ep-logo">
                                 <a href="index.html">
-                                    <img src="assets/Landing_1/assets/images/new/3C.png" alt="logo" />
+                                    <img src="/assets/Landing_1/assets/images/new/3C.png" alt="logo" />
                                 </a>
                             </div>
                         </div>

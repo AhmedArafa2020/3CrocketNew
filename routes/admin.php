@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\HeroSectionController;
 use App\Http\Controllers\Admin\NewAboutSectionController;
+use App\Http\Controllers\Admin\NewBrandsController;
 use Illuminate\Support\Facades\Route;
 
 $prefix = getAdminPanelUrlPrefix();
@@ -516,6 +517,16 @@ Route::group(['prefix' => $prefix, 'namespace' => 'Admin', 'middleware' => ['web
             Route::get('edit', [NewAboutSectionController::class, 'edit'])->name('admin.new_about.edit');
             Route::put('update', [NewAboutSectionController::class, 'update'])->name('admin.new_about.update');
         });
+        Route::prefix('new-home/brands')->group(function () {
+            Route::get('edit', [NewBrandsController::class, 'edit'])->name('admin.new_brands.edit');
+            Route::put('update', [NewBrandsController::class, 'update'])->name('admin.new_brands.update');
+        });
+        Route::prefix('admin')->middleware(['auth'])->group(function () {
+            Route::resource('booking-slots', \App\Http\Controllers\Admin\BookingSlotController::class);
+            Route::get('/bookings', [App\Http\Controllers\Admin\BookingController::class, 'index'])->name('admin.bookings.index');
+
+        });
+
 
         Route::group(['prefix' => 'financial'], function () {
 

@@ -1,15 +1,12 @@
-<!-- Start Funfact Area -->
-<section class="ep-funfact ep-funfact--style2 section-gap position-relative">
+<section class="ep-funfact stststicItems ep-funfact--style2 section-gap position-relative">
     <div class="container ">
-        <div class="ep-funfact-shape updown-ani">
-            <img src="assets/Landing_1/assets/images/funfact/funfact-2/arrow.svg" alt="arrow-icon" />
-        </div>
+
         <div class="row">
             <!-- Single Funfact Card -->
-            <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+            <div class="col-lg-4 col-xl-3 col-md-6 col-6">
                 <div class="ep-funfact__card ep-funfact__card--style2 wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
                     <div class="ep-funfact__icon ep5-bg-light">
-                        <img src="assets/Landing_1/assets/images/funfact/funfact-2/1.svg" alt="funfact-icon" />
+                        <img src="/assets/Landing_1/assets/images/funfact/funfact-2/1.svg" alt="funfact-icon" />
                     </div>
                     <div class="ep-funfact__info m-0">
                         <h4><span class="counter">10</span>+</h4>
@@ -20,10 +17,10 @@
                 </div>
             </div>
             <!-- Single Funfact Card -->
-            <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+            <div class="col-lg-4 col-xl-3 col-md-6 col-6">
                 <div class="ep-funfact__card ep-funfact__card--style2 wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
                     <div class="ep-funfact__icon ep1-bg-light">
-                        <img src="assets/Landing_1/assets/images/funfact/funfact-2/2.svg" alt="funfact-icon" />
+                        <img src="/assets/Landing_1/assets/images/funfact/funfact-2/2.svg" alt="funfact-icon" />
                     </div>
                     <div class="ep-funfact__info m-0">
                         <h4><span class="counter">99</span>k+</h4>
@@ -34,10 +31,10 @@
                 </div>
             </div>
             <!-- Single Funfact Card -->
-            <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+            <div class="col-lg-4 col-xl-3 col-md-6 col-6">
                 <div class="ep-funfact__card ep-funfact__card--style2 wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
                     <div class="ep-funfact__icon ep7-bg-light">
-                        <img src="assets/Landing_1/assets/images/funfact/funfact-2/3.svg" alt="funfact-icon" />
+                        <img src="/assets/Landing_1/assets/images/funfact/funfact-2/3.svg" alt="funfact-icon" />
                     </div>
                     <div class="ep-funfact__info m-0">
                         <h4><span class="counter">1000</span>k+</h4>
@@ -48,10 +45,10 @@
                 </div>
             </div>
             <!-- Single Funfact Card -->
-            <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+            <div class="col-lg-4 col-xl-3 col-md-6 col-6">
                 <div class="ep-funfact__card ep-funfact__card--style2 wow fadeInUp" data-wow-delay=".9s" data-wow-duration="1s">
                     <div class="ep-funfact__icon ep2-bg-light">
-                        <img src="assets/Landing_1/assets/images/funfact/funfact-2/4.svg" alt="funfact-icon" />
+                        <img src="/assets/Landing_1/assets/images/funfact/funfact-2/4.svg" alt="funfact-icon" />
                     </div>
                     <div class="ep-funfact__info m-0">
                         <h4><span class="counter">100</span>k+</h4>
@@ -64,4 +61,3 @@
         </div>
     </div>
 </section>
-<!-- End Funfact Area -->

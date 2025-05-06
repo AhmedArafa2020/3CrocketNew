@@ -68,7 +68,7 @@
 <!-- Start Faq Area -->
 <section class="ep-faq ep-faq--style2 section-gap position-relative">
     <div class="ep-faq__pattern-3 updown-ani">
-        <img src="assets/images/faq/faq-2/pattern.svg" alt="pattern" />
+        <img src="/assets/Landing_1/assets/images/faq/faq-2/pattern.svg" alt="pattern" />
     </div>
     <div class="container ">
         <div class="row justify-content-center">

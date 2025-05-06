@@ -10,10 +10,19 @@ class NewAboutSection extends Model
     use HasFactory;
     protected $fillable = [
         'sm_title',
-        'title',
+        'big_title',
         'description',
+      //  'image',
+        'overview_icon',
+        'overview_number',
+        'overview_text',
         'btn_text',
-        'btn_url'
+        'btn_link',
+        'feature_cards',
+    ];
+
+    protected $casts = [
+        'feature_cards' => 'array',
     ];
 
 }
