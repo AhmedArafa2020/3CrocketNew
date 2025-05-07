@@ -1,9 +1,9 @@
 /node_modules
 /public/build
 /public/hot
-/storage/logs
-/public/storage
-/vendor
+storage/logs
+public/storage
+vendor
 .env
 .env.backup
 .phpunit.result.cache
@@ -12,10 +12,10 @@ Homestead.yaml
 auth.json
 npm-debug.log
 yarn-error.log
-/.idea
+.idea
 /.vscode
-/storage/framework/cache/
-/storage/framework/views/
-/storage/framework/sessions/
+storage/framework/cache/
+storage/framework/views/
+storage/framework/sessions/
 
 
