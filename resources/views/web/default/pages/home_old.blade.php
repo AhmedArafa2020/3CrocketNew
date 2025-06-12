@@ -33,6 +33,7 @@
                 @if($heroSection == "2")
                     <div class="row slider-content align-items-center hero-section2 flex-column-reverse flex-md-row">
                         <div class="col-12 col-md-7 col-lg-6">
+
                             <h1 class="text-secondary font-weight-bold">{{ $heroSectionData['title'] }}</h1>
                             <p class="slide-hint text-gray mt-20">{!! nl2br($heroSectionData['description']) !!}</p>
 

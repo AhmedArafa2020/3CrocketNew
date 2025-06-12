@@ -57,6 +57,8 @@ Route::get('/emergencyDatabaseUpdate', function () {
     ]);
 });
 
+
+
 Route::group(['namespace' => 'Auth', 'middleware' => ['check_mobile_app','share', 'check_maintenance', 'check_restriction']], function () {
     Route::get('/login', 'LoginController@showLoginForm');
     Route::post('/login', 'LoginController@login');
@@ -94,6 +96,7 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
     Route::post('/set-currency', 'SetCurrencyController@setCurrency');
 
     Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/demo', 'HomeController@index_demo')->name('demo');
 
     Route::get('/getDefaultAvatar', 'DefaultAvatarController@make');
 

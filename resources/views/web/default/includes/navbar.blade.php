@@ -5,7 +5,7 @@
 
     $navBtnUrl = null;
     $navBtnText = null;
-
+$demoBtnUrl ='/demo';
     if(request()->is('forums*')) {
         $navBtnUrl = '/forums/create-topic';
         $navBtnText = trans('update.create_new_topic');
@@ -103,7 +103,9 @@
             </div>
 
             <div class="nav-icons-or-start-live navbar-order d-flex align-items-center justify-content-end">
-
+                <a href="{{ $demoBtnUrl }}" class="d-none d-lg-flex btn btn-sm btn-primary nav-start-a-live-btn">
+                  Demo
+                </a>
                 @if(!empty($navBtnUrl))
                     <a href="{{ $navBtnUrl }}" class="d-none d-lg-flex btn btn-sm btn-primary nav-start-a-live-btn">
                         {{ $navBtnText }}
@@ -141,3 +143,4 @@
 @push('scripts_bottom')
     <script src="/assets/default/js/parts/navbar.min.js"></script>
 @endpush
+
