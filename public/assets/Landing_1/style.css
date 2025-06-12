@@ -452,8 +452,9 @@ margin-top: 20px;
     object-fit: cover;
     justify-content: center;
     align-items: center;
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 55px;
+    border-radius: 8px;
     display: flex
 ;
 }
@@ -468,9 +469,69 @@ margin-top: 20px;
     padding-right: 5.56px;
 }
 
+.hidden_xs{
+    display: inline-block;
+    width: 100%;
+}
+.visible_xs{
+    display: none;
+    width: 100%;
+}
 
+/******************/
+.SliderWHyUs{
 
+}
+.SliderWHyUs .SliderItem{
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+.SliderWHyUs .SliderItem h5{
+    font-size: 20px;
+    margin: 0;
+    font-weight: 500;
+    color: #24ade3;
+    margin-bottom: 5px;
+}
+.SliderWHyUs .SliderItem p {
+    font-size: 15px;
+    line-height: 1.5; /* تقدر تعدله حسب التصميم */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* عدد السطور */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.SliderWHyUs .SliderItem img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 15px;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+    display: inline-flex
+;
+    height: 40px;
+    width: 40px;
+    background: #24ade3;
+    color: #fff;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 2px;
+}
 @media(max-width:768px){
+    .hidden_xs{
+        display: none;
+    }
+    .visible_xs{
+        display: inline-block;
+    }
     .ep-hero__content--style2 .ep-hero__title {
         font-size: 26px;
     }
@@ -507,6 +568,281 @@ margin-top: 20px;
     .Serviceitemsss {
         flex-wrap: wrap;
         gap: 15px;
+    }
+
+    .MobPriceAccid{
+
+    }
+    .MobPriceAccid .accordion-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .MobPriceAccid .accordion-header span{
+        display: block;
+        width: calc(100% - 30px);
+    }
+    .MobPriceAccid .accordion-header .accordion-button{
+        border: 0 !important;
+        width: 30px;
+        display: flex
+;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        background: #24ade3;
+        text-align: center;
+        border-radius: 50%;
+        padding: 0;
+        color: #fff;
+    }
+    .MobPriceAccid .accordion-header .accordion-button::after{
+        margin: 0;
+        color: #fff;
+        font-size: 24px;
+    }
+    .MobPriceAccid .accordion-header .accordion-button:not(.collapsed)::after{
+        background: #24ade3;
+        border-radius: 50%;
+    }
+    .MobPriceAccid .accordion-header .accordion-collapse{
+        
+    }
+    .MobPriceAccid .ep-faq__accordion-body{
+        border: 0 !important;
+    }
+
+/******************/
+
+    .stststicItems .ep-funfact__card {
+        margin-top: 15px;
+        min-height: auto;
+    }
+    .stststicItems .ep-funfact__card--style2 {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 6px;
+    }
+    .stststicItems .ep-funfact__card--style2 .ep-funfact__info {
+        text-align: center;
+    }
+    .ep-team__card{
+        padding: 8px;
+    }
+    .ep-team__img img {
+        height: 125px;
+    }
+    .ep-team__img .ep-video__btn {
+        width: 50px;
+        height: 50px;
+        line-height: 55px;
+        padding: 0;
+        font-size: 20px;
+        left: calc(50% - 25px);
+        top: calc(50% - 40px);
+        margin-left: 0;
+        margin-top: 0;
+        font-size: 22px;
+    }
+    .ep-team__card--style2 .ep-team__img img {
+        height: 200px;
+    }
+    .ep-team__card--style2 {
+        height: 200px;
+    }
+    .ep-team__card--style2 .ep-team__content {
+        width: 95%;
+        bottom: 10px;
+        padding: 5px 0;
+        font-size: 15px;
+    }
+    /**************/
+    .ep-hero__title {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .ep-hero__btn {
+        margin-top: 15px;
+    }
+    .BookFormBox{
+        margin-top: 0px;
+    }
+    .ep-hero {
+        padding: 110px 0px 40px;
+    }
+    .ep-about.ep-about--style2 {
+        padding-bottom: 30px;
+        margin-top: 0;
+        padding-top: 30px;
+    }
+    .ep-section__content {
+        margin-top: 0px;
+    }
+    .ep-section-head__text {
+        margin: 0;
+        margin-top: 0;
+        line-height: inherit;
+    }
+    .ep-section-head__sm-title {
+        line-height: inherit;
+        margin-bottom: 0;
+    }
+    .ep-section-head__big-title {
+        font-size: 22px;
+    }
+    .ep-section-head {
+        margin-bottom: 10px;
+    }
+    .ep-feature-list {
+        gap: 10px;
+        margin-bottom: 5px;
+    }
+    .ep-feature-list__icon i {
+        top: 5px;
+    }
+    .ep-section__btn {
+        margin-top: 15px;
+    }
+    .section-gap{
+        margin-top: 0;
+        padding: 30px 0px;
+    }
+    .ep-section-head__big-title {
+        font-size: 20px;
+    }
+    p {
+        font-size: 15px !important;
+        line-height: inherit;
+    }
+    .ep-funfact.section-gap {
+        padding: 30px 0px 30px;
+    }
+    .stststicItems .ep-funfact__card {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .stststicItems .ep-funfact__card--style2{
+        padding: 10px;
+    }
+    .ep-funfact__info h4 {
+        font-size: 25px;
+    }
+    .BoxxServices {
+        padding: 30px 10px;
+        grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    }
+    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
+        margin-bottom: 0;
+    }
+    .ep-team__content {
+        margin-top: 10px;
+    }
+    .ep-team__author h5 {
+        font-size: 16px;
+        margin-bottom: 0;
+        line-height: normal;
+    }
+    .ep-team__card{
+        margin-top: 0;
+    }
+    .ep-pricing__card {
+        padding: 15px;
+        margin-top: 15px;
+    }
+    .ep-pricing__title{
+        margin-bottom: 0;
+    }
+    .ep-pricing__icon {
+        margin-bottom: 10px;
+    }
+    .ep-pricing__amount {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .ep-pricing__features {
+        margin-top: 10px;
+    }
+    .ep-pricing__features li {
+        margin-bottom: 5px;
+    }
+    .ep-pricing__btn {
+        margin-top: 10px;
+    }
+    .ep-hero.ep-hero--style2 {
+        padding-top: 30px;
+    }
+    .ep-hero__widget {
+        display: block;
+    }
+    .ep-hero__content--style2 .ep-hero__title {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .ep-hero__widget-style2 .ep-hero__img img {
+        width: 100%;
+        height: auto;
+    }
+    .ep-section-head__big-title.fs-28 {
+        font-size: 20px;
+    }
+    .ep-faq__accordion-body{
+        padding-top: 0;
+    }
+    .ep-faq__accordion-item .accordion-button:not(.collapsed) {
+        padding-bottom: 10px;
+    }
+    .ep-footer__top {
+        padding: 0 0px 10px;
+    }
+    .ep-footer__text {
+        margin-top: 10px;
+    }
+    .ep-footer__contact {
+        margin-top: 10px;
+    }
+    .ep-footer__widget {
+        margin-top: 15px;
+    }
+    .ep-footer__links-list li {
+        margin-bottom: 5px;
+    }
+    /***********/
+    .ep-funfact__card--style2 .ep-funfact__info {
+        text-align: center;
+    }
+
+    .ep-pricing__head{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .Serviceitemsss .ItemServ img{
+        width: 35px;
+        height: 35px;
+    }
+    .ep-funfact__icon{
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .ep-funfact__card--style2 .ep-funfact__icon img {
+        width: 24px;
+        height: 24px;
+    }
+    .ep-pricing__icon {
+        position: initial;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+    }
+    .ep-pricing__icon img {
+        width: 35px;
+        height: 35px;
     }
 }
 

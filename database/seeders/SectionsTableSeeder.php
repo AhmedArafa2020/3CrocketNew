@@ -623,6 +623,17 @@ class SectionsTableSeeder extends Seeder
         // Translator 3120 - 3129
         Section::updateOrCreate(['id' => 3130], ['name' => 'admin_translator', 'caption' => 'Translator']);
         Section::updateOrCreate(['id' => 3131], ['name' => 'admin_translator_actions', 'section_group_id' => 3130, 'caption' => 'Actions (Create/Edit/Delete)']);
+// newHome Sections 3201 - 3209
+        Section::updateOrCreate(['id' => 3201], ['name' => 'admin_new_home', 'caption' => 'New Home']);
+        Section::updateOrCreate(['id' => 3202], ['name' => 'admin_new_home_hero', 'section_group_id' => 3201, 'caption' => 'Hero Section']);
+        Section::updateOrCreate(['id' => 3203], ['name' => 'admin_new_home_about', 'section_group_id' => 3201, 'caption' => 'About Section']);
+        Section::updateOrCreate(['id' => 3204], ['name' => 'admin_new_home_brands', 'section_group_id' => 3201, 'caption' => 'Brands Section']);
+        Section::updateOrCreate(['id' => 3205], ['name' => 'admin_new_home_funfacts', 'section_group_id' => 3201, 'caption' => 'Fun Facts Section']);
+        Section::updateOrCreate(['id' => 3206], ['name' => 'admin_new_home_services', 'section_group_id' => 3201, 'caption' => 'Services Section']);
+        Section::updateOrCreate(['id' => 3207], ['name' => 'admin_new_home_students', 'section_group_id' => 3201, 'caption' => 'Students Section']);
+        Section::updateOrCreate(['id' => 3208], ['name' => 'admin_new_home_pricing', 'section_group_id' => 3201, 'caption' => 'Pricing Section']);
+        Section::updateOrCreate(['id' => 3209], ['name' => 'admin_new_home_opportunity', 'section_group_id' => 3201, 'caption' => 'Opportunity Section']);
+
 
         /* Run Panel Sections */
         $this->runPanelSections();

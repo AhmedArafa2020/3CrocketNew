@@ -6,7 +6,7 @@
   background-color: var(--ep-offwhite-color);
 }
 .ep-hero {
-  padding: 180px 0px 100px;
+  padding: 180px 0px 0px;
 }
 .ep-hero__title {
   font-size: 50px;
